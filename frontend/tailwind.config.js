@@ -13,17 +13,15 @@ module.exports = {
         heading: ["'Space Grotesk'", "sans-serif"],
         body: ["'Inter'", "sans-serif"],
       },
-      colors: {
-        royal: "#0F4C81",
-        royalbright: "#2A7BC4",
-        aqua: "#00E5FF",
-      },
       borderRadius: {
         lg: 'var(--radius)',
         md: 'calc(var(--radius) - 2px)',
         sm: 'calc(var(--radius) - 4px)'
       },
       colors: {
+        royal: "#0F4C81",
+        royalbright: "#2A7BC4",
+        aqua: "#00E5FF",
         background: 'hsl(var(--background))',
         foreground: 'hsl(var(--foreground))',
         card: {

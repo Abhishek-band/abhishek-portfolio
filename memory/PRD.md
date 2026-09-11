@@ -35,8 +35,14 @@ Build a premium, animated, Awwwards-level personal portfolio from the user's upl
 - `GET /api/` health OK; `POST /api/contact` saves + returns doc; invalid payload → 422
 - UI: all sections screenshot-verified; form submitted via UI with success toast; light mode toggle verified
 
+## Implemented (2026-09-11) — Enquiries Dashboard
+- Private `/admin` route: password-only login (ADMIN_PASSWORD in backend/.env, bcrypt check, 12h JWT bearer in localStorage `ab-admin-token`), 5 fails/IP → 15 min lockout
+- API: `POST /api/admin/login`, `GET /api/admin/me`, `GET/PATCH/DELETE /api/admin/enquiries[/{id}]` (read/starred flags)
+- UI: glass inbox with search, All/Unread/Starred filters + counts, unread dot, star, mark read/unread, two-step delete, "Reply via email" mailto, refresh, theme toggle, sign out
+- Fixed site-wide bug: duplicate `colors` key in tailwind.config.js dropped royal/royalbright/aqua tokens
+- Tested: testing agent iteration_1 — backend 100%, frontend 100%
+
 ## Backlog
 - P0: Email notification on new enquiry (Resend integration)
-- P1: Admin view of contact enquiries
 - P1: Custom domain + real canonical/OG URLs
 - P2: Case-study detail pages per project, blog/writing section
