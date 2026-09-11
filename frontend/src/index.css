@@ -1,0 +1,210 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+    :root {
+        --background: 213 50% 97%;
+        --foreground: 216 57% 11%;
+        --card: 0 0% 100%;
+        --card-foreground: 216 57% 11%;
+        --popover: 0 0% 100%;
+        --popover-foreground: 216 57% 11%;
+        --primary: 206 79% 28%;
+        --primary-foreground: 0 0% 100%;
+        --secondary: 210 30% 93%;
+        --secondary-foreground: 216 50% 18%;
+        --muted: 210 30% 93%;
+        --muted-foreground: 214 17% 42%;
+        --accent: 187 100% 38%;
+        --accent-foreground: 216 57% 11%;
+        --destructive: 0 72% 51%;
+        --destructive-foreground: 0 0% 100%;
+        --border: 208 35% 86%;
+        --input: 208 35% 80%;
+        --ring: 187 100% 38%;
+        --radius: 0.9rem;
+        --surface: rgba(255, 255, 255, 0.62);
+        --line: rgba(15, 76, 129, 0.16);
+        --soft: #4b5d75;
+        --orb-1: rgba(15, 76, 129, 0.28);
+        --orb-2: rgba(0, 180, 220, 0.18);
+    }
+    .dark {
+        --background: 221 48% 6%;
+        --foreground: 213 42% 94%;
+        --card: 220 40% 10%;
+        --card-foreground: 213 42% 94%;
+        --popover: 220 40% 10%;
+        --popover-foreground: 213 42% 94%;
+        --primary: 204 82% 45%;
+        --primary-foreground: 0 0% 100%;
+        --secondary: 219 32% 15%;
+        --secondary-foreground: 213 42% 90%;
+        --muted: 219 32% 15%;
+        --muted-foreground: 216 18% 66%;
+        --accent: 187 100% 50%;
+        --accent-foreground: 221 48% 6%;
+        --destructive: 0 63% 45%;
+        --destructive-foreground: 0 0% 100%;
+        --border: 218 28% 18%;
+        --input: 218 28% 22%;
+        --ring: 187 100% 50%;
+        --surface: rgba(255, 255, 255, 0.045);
+        --line: rgba(255, 255, 255, 0.09);
+        --soft: #93a1b8;
+        --orb-1: rgba(15, 76, 129, 0.5);
+        --orb-2: rgba(0, 229, 255, 0.13);
+    }
+}
+
+@layer base {
+    * {
+        @apply border-border;
+    }
+    html {
+        scroll-behavior: auto;
+    }
+    body {
+        @apply bg-background text-foreground;
+        font-family: 'Inter', sans-serif;
+        overflow-x: hidden;
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+    }
+    ::selection {
+        background: rgba(0, 229, 255, 0.28);
+    }
+    ::-webkit-scrollbar {
+        width: 10px;
+    }
+    ::-webkit-scrollbar-track {
+        background: hsl(var(--background));
+    }
+    ::-webkit-scrollbar-thumb {
+        background: linear-gradient(180deg, #0f4c81, #00b7e0);
+        border-radius: 8px;
+    }
+}
+
+@layer components {
+    .glass {
+        background: var(--surface);
+        border: 1px solid var(--line);
+        backdrop-filter: blur(18px);
+        -webkit-backdrop-filter: blur(18px);
+    }
+    .text-gradient {
+        background: linear-gradient(100deg, #2a7bc4 0%, #00c8f0 55%, #7ef0ff 100%);
+        -webkit-background-clip: text;
+        background-clip: text;
+        color: transparent;
+    }
+    .soft {
+        color: var(--soft);
+    }
+    .ring-conic {
+        background: conic-gradient(from 0deg, #0f4c81, #00e5ff, #2a7bc4, #7ef0ff, #0f4c81);
+    }
+    .orb {
+        position: absolute;
+        border-radius: 9999px;
+        filter: blur(90px);
+        pointer-events: none;
+    }
+    .pill-glow {
+        transition: transform 0.3s ease, box-shadow 0.3s ease, border-color 0.3s ease, color 0.3s ease;
+    }
+    .pill-glow:hover {
+        transform: translateY(-4px);
+        border-color: rgba(0, 229, 255, 0.6);
+        box-shadow: 0 0 24px rgba(0, 229, 255, 0.28), inset 0 0 12px rgba(0, 229, 255, 0.08);
+    }
+    .btn-primary {
+        @apply font-heading font-semibold;
+        background: linear-gradient(100deg, #0f4c81, #1a6db0);
+        color: #fff;
+        box-shadow: 0 8px 32px rgba(15, 76, 129, 0.45), inset 0 1px 0 rgba(255, 255, 255, 0.18);
+        transition: transform 0.25s ease, box-shadow 0.25s ease;
+    }
+    .btn-primary:hover {
+        box-shadow: 0 10px 40px rgba(0, 229, 255, 0.35), inset 0 1px 0 rgba(255, 255, 255, 0.25);
+        transform: translateY(-2px);
+    }
+    .btn-ghost {
+        @apply font-heading font-semibold;
+        transition: transform 0.25s ease, border-color 0.25s ease, color 0.25s ease;
+    }
+    .btn-ghost:hover {
+        transform: translateY(-2px);
+        border-color: rgba(0, 229, 255, 0.6);
+    }
+}
+
+@keyframes spin-slow {
+    to { transform: rotate(360deg); }
+}
+@keyframes marquee-x {
+    from { transform: translateX(0); }
+    to { transform: translateX(-50%); }
+}
+@keyframes float-y {
+    0%, 100% { transform: translateY(0px); }
+    50% { transform: translateY(-20px); }
+}
+@keyframes orb-drift {
+    0%, 100% { transform: translate(0, 0) scale(1); }
+    50% { transform: translate(50px, -40px) scale(1.12); }
+}
+@keyframes caret-blink {
+    0%, 45% { opacity: 1; }
+    50%, 100% { opacity: 0; }
+}
+@keyframes pulse-dot {
+    0%, 100% { opacity: 1; transform: scale(1); }
+    50% { opacity: 0.45; transform: scale(0.8); }
+}
+
+.animate-spin-slow { animation: spin-slow 7s linear infinite; }
+.animate-marquee { animation: marquee-x 42s linear infinite; }
+.animate-float { animation: float-y 7s ease-in-out infinite; }
+.animate-orb { animation: orb-drift 16s ease-in-out infinite; }
+.animate-caret { animation: caret-blink 1s step-end infinite; }
+.animate-pulse-dot { animation: pulse-dot 1.8s ease-in-out infinite; }
+
+@media (prefers-reduced-motion: reduce) {
+    .animate-marquee, .animate-float, .animate-orb, .animate-spin-slow, .animate-pulse-dot {
+        animation: none;
+    }
+}
+
+@layer base {
+    [data-debug-wrapper="true"] {
+        display: contents !important;
+    }
+    [data-debug-wrapper="true"] > * {
+        margin-left: inherit;
+        margin-right: inherit;
+        margin-top: inherit;
+        margin-bottom: inherit;
+        padding-left: inherit;
+        padding-right: inherit;
+        padding-top: inherit;
+        padding-bottom: inherit;
+        column-gap: inherit;
+        row-gap: inherit;
+        gap: inherit;
+        border-left-width: inherit;
+        border-right-width: inherit;
+        border-top-width: inherit;
+        border-bottom-width: inherit;
+        border-left-style: inherit;
+        border-right-style: inherit;
+        border-top-style: inherit;
+        border-bottom-style: inherit;
+        border-left-color: inherit;
+        border-right-color: inherit;
+        border-top-color: inherit;
+        border-bottom-color: inherit;
+    }
+}

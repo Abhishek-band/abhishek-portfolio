@@ -1,0 +1,165 @@
+{
+  "project_name": "Abhishek Gopal Band - PGDM Marketing Portfolio",
+  "app_type": "portfolio",
+  "theme": {
+    "default_mode": "dark",
+    "mode_toggle": true,
+    "dark_background": "#0B101D",
+    "dark_card_background": "#121A2D",
+    "light_background": "#F8FAFC",
+    "light_card_background": "#FFFFFF"
+  },
+  "typography": {
+    "heading_font": "'Space Grotesk', sans-serif",
+    "body_font": "'Inter', sans-serif",
+    "google_fonts_url": "https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Space+Grotesk:wght@400;500;600;700&display=swap",
+    "rules": {
+      "h1": "text-4xl sm:text-5xl lg:text-6xl font-bold tracking-tight font-heading leading-tight",
+      "h2": "text-2xl sm:text-3xl lg:text-4xl font-bold tracking-tight font-heading",
+      "h3": "text-xl sm:text-2xl font-semibold font-heading",
+      "h4": "text-lg sm:text-xl font-medium font-heading",
+      "overline": "text-xs font-mono uppercase tracking-[0.25em] text-cyan-400 font-semibold",
+      "body": "text-base leading-relaxed text-slate-300 dark:text-slate-300 light:text-slate-600"
+    }
+  },
+  "colors": {
+    "royal_blue": "#0F4C81",
+    "primary_dark": "#0A192F",
+    "cyan_accent": "#00E5FF",
+    "cyan_glow": "#06B6D4",
+    "glass_border_dark": "rgba(255, 255, 255, 0.1)",
+    "glass_bg_dark": "rgba(15, 23, 42, 0.75)",
+    "glass_border_light": "rgba(15, 76, 129, 0.15)",
+    "glass_bg_light": "rgba(255, 255, 255, 0.8)",
+    "slate_neutral": {
+      "900": "#0F172A",
+      "800": "#1E293B",
+      "700": "#334155",
+      "400": "#94A3B8",
+      "200": "#E2E8F0",
+      "50": "#F8FAFC"
+    }
+  },
+  "layout_and_structure": {
+    "sections": [
+      {
+        "id": "hero",
+        "name": "Hero Section",
+        "features": [
+          "Large kinetic typing headline: 'PGDM Marketing Professional | AI Workflow Strategist | Growth Driver'",
+          "Profile photo with continuous rotating glow border",
+          "Line-by-line masked text reveal using Framer Motion",
+          "Floating gradient background orb canvas effect",
+          "Quick statistics highlights (3+ Yrs Exp, 15+ Campaigns, 40% Growth Avg)",
+          "Magnetic CTA buttons: 'Explore Work' and 'Download Resume / Contact'"
+        ]
+      },
+      {
+        "id": "about",
+        "name": "About Me & Manifesto",
+        "features": [
+          "Numbered manifesto chapters (Chapter 01: Strategy, Chapter 02: Execution, Chapter 03: AI Marketing Integration)",
+          "Core competencies summary",
+          "Interactive bio card with glassmorphism depth"
+        ]
+      },
+      {
+        "id": "experience",
+        "name": "Professional Experience",
+        "features": [
+          "Interactive vertical timeline with glowing nodes",
+          "Detailed role breakdowns with key metric callouts",
+          "Featured companies: Growth & Digital Marketing roles, Yashveer Group, Consultancy Projects"
+        ]
+      },
+      {
+        "id": "education",
+        "name": "Education Timeline",
+        "features": [
+          "PGDM Marketing specialization details",
+          "Academic achievements & certifications",
+          "Institution highlights with badging"
+        ]
+      },
+      {
+        "id": "projects",
+        "name": "Featured Projects",
+        "features": [
+          "3D hover tilt cards with metallic/glass highlights",
+          "Project 1: Apna E-School (EdTech Growth & Student Acquisition Campaign)",
+          "Project 2: Yashveer Group (Brand Positioning & B2B Lead Gen Engine)",
+          "Project 3: AI Marketing Workflow Automation (Custom AI Agent & Content Engine)",
+          "Filter by tags: Digital Strategy, AI Tools, Brand Management, Analytics"
+        ]
+      },
+      {
+        "id": "skills",
+        "name": "Skills & Tool Stack",
+        "features": [
+          "Glowing skill pills with hover aura",
+          "Categorized tabs: Strategic Marketing, Performance Marketing & SEO, AI & Automation Tools, Data & Analytics",
+          "Proficiency indicators & tool logos/icons"
+        ]
+      },
+      {
+        "id": "interests_objective",
+        "name": "Interests & Career Objective",
+        "features": [
+          "Editorial marquee ticker listing core passions (AI-Driven Customer Journeys, Neuromarketing, Growth Hacking, Market Research)",
+          "Clear, impactful career objective statement card"
+        ]
+      },
+      {
+        "id": "contact",
+        "name": "Contact & Connect",
+        "features": [
+          "Working contact form connected to backend API endpoint (/api/contact)",
+          "Direct contact information (Email, LinkedIn, Phone, Location)",
+          "Interactive map / direct message trigger with toast feedback using Sonner"
+        ]
+      },
+      {
+        "id": "footer",
+        "name": "Footer",
+        "features": [
+          "Kinetic large typography 'ABHISHEK BAND'",
+          "Quick section links & social connections",
+          "Copyright & live status badge ('Available for Full-time Marketing Roles')"
+        ]
+      }
+    ]
+  },
+  "motion_and_animations": {
+    "library": "framer-motion",
+    "smooth_scrolling": "Lenis smooth scroll integration",
+    "effects": [
+      "Rotating border gradient animation around profile avatar",
+      "Typing effect for hero sub-headline",
+      "3D tilt/hover effect on project cards using Framer Motion transform mouse tracking",
+      "Magnetic attraction button effect on primary CTAs",
+      "Scroll progress bar at top of viewport",
+      "Fade-up and slide entrance animations with staggered children"
+    ]
+  },
+  "media_assets": {
+    "profile_photo": "https://images.unsplash.com/photo-1589386417686-0d34b5903d23?crop=entropy&cs=srgb&fm=jpg&ixid=M3w4NTYxOTJ8MHwxfHNlYXJjaHwxfHxJbmRpYW4lMjB5b3VuZyUyMG1hbGUlMjBwcm9mZXNzaW9uYWwlMjBidXNpbmVzcyUyMG1hcmtldGluZyUyMHBvcnRyYWl0fGVufDB8fHx8MTc4OTEyMDExNnww&ixlib=rb-4.1.0&q=85",
+    "project_apna_eschool": "https://images.unsplash.com/photo-1519389950473-47ba0277781c?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzd8MHwxfHNlYXJjaHwyfHxkaWdpdGFsJTIwbWFya2V0aW5nJTIwc3RyYXRlZ3klMjBncm93dGglMjBhbmFseXRpY3MlMjBjYW1wYWlnbiUyMHdvcmtzcGFjZXxlbnwwfHx8fDE3ODkxMjAxMTZ8MA&ixlib=rb-4.1.0&q=85",
+    "project_yashveer_group": "https://images.unsplash.com/photo-1571677246347-5040036b95cc?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzd8MHwxfHNlYXJjaHw0fHxkaWdpdGFsJTIwbWFya2V0aW5nJTIwc3RyYXRlZ3klMjBncm93dGglMjBhbmFseXRpY3MlMjBjYW1wYWlnbiUyMHdvcmtzcGFjZXxlbnwwfHx8fDE3ODkxMjAxMTZ8MA&ixlib=rb-4.1.0&q=85",
+    "project_ai_workflow": "https://images.unsplash.com/photo-1460925895917-afdab827c52f?crop=entropy&cs=srgb&fm=jpg&ixid=M3w3NTY2Nzd8MHwxfHNlYXJjaHwxfHxkaWdpdGFsJTIwbWFya2V0aW5nJTIwc3RyYXRlZ3klMjBncm93dGglMjBhbmFseXRpY3MlMjBjYW1wYWlnbiUyMHdvcmtzcGFjZXxlbnwwfHx8fDE3ODkxMjAxMTZ8MA&ixlib=rb-4.1.0&q=85"
+  },
+  "instructions_to_main_agent": [
+    "Ensure dark theme is active by default on first load, with a working toggle for light mode.",
+    "Import Space Grotesk and Inter fonts from Google Fonts in index.html or index.css.",
+    "Include data-testid on all interactive elements (buttons, inputs, navigation links, theme toggle, contact submit).",
+    "Implement glassmorphism cards with subtle border gradients and inner glow effects.",
+    "Connect the contact form to backend POST /api/contact or local state with Sonner notification feedback.",
+    "Avoid generic AI slop centered text; use asymmetric bento grids, editorial typography, and generous spacing.",
+    "Do NOT use markdown code blocks inside design_guidelines.json, keep it clean JSON."
+  ],
+  "UNIVERSAL GUIDELINES FOR MAIN AGENT": {
+    "data_testid_requirement": "All buttons, links, inputs, and interactive components MUST have data-testid attributes.",
+    "theme_handling": "Respect dark mode default with localStorage persistence.",
+    "glassmorphism_rule": "Use backdrop-blur-xl with semi-transparent background and 1px subtle border.",
+    "spacing": "Use p-6 to p-12 for containers to allow luxury breathing room."
+  }
+}
