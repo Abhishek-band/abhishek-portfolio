@@ -2,8 +2,6 @@ export const profile = {
   name: "Abhishek Gopal Band",
   shortName: "Abhishek Band",
   email: "abhishekband621@gmail.com",
-  phone: "+91 76209 47951",
-  phoneHref: "tel:+917620947951",
   linkedin: "https://linkedin.com/in/abhishekband/",
   linkedinLabel: "linkedin.com/in/abhishekband",
   location: "Akola · Pune, Maharashtra, India",
